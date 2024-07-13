@@ -4,6 +4,53 @@
 
 The User Organisation App is designed to manage user data and organisational hierarchies efficiently. It leverages Node.js and TypeScript to provide a robust and scalable backend service.
 
+## Database Design (ERD)
+
+# Database Design Overview
+
+This document outlines the database design for the User Organisation App, focusing on the `User` and `Organisation` entities.
+
+## Entities and Relationships
+
+### 1. User
+
+- **Table Name:** `users`
+- **Description:** Stores user information.
+- **Fields:**
+  - `id` (Primary Key, UUID): Unique identifier for each user.
+  - `username` (String): Unique username for the user.
+  - `email` (String): Unique email address for the user.
+  - `password` (String): Hashed password for authentication.
+  - `first_name` (String): User's first name.
+  - `last_name` (String): User's last name.
+  - `organisation_id` (Foreign Key, UUID): References the organisation to which the user belongs.
+  - `role` (String): Role of the user within the organisation (e.g., admin, member).
+  - `created_at` (Timestamp): Timestamp when the user was created.
+  - `updated_at` (Timestamp): Timestamp when the user was last updated.
+
+### 2. Organisation
+
+- **Table Name:** `organisations`
+- **Description:** Stores organisation information.
+- **Fields:**
+  - `id` (Primary Key, UUID): Unique identifier for each organisation.
+  - `name` (String): Name of the organisation.
+  - `address` (String): Address of the organisation.
+  - `phone` (String): Contact phone number for the organisation.
+  - `email` (String): Contact email address for the organisation.
+  - `created_at` (Timestamp): Timestamp when the organisation was created.
+  - `updated_at` (Timestamp): Timestamp when the organisation was last updated.
+
+## Relationships
+
+- **One-to-Many Relationship:** 
+  - An organisation can have multiple users. This is represented by the foreign key `organisation_id` in the `users` table.
+
+## ER Diagram
+
+![database](./public/hng_erd.jpg)
+
+
 ## Folder Structure
 
 This is a folder structure
