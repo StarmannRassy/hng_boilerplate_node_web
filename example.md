@@ -8,6 +8,7 @@ The User Organisation App is designed to manage user data and organisational hie
 ## Folder Structure
 
 ```
+
 |--- src
 |    |--- controllers
 |    |--- database
@@ -22,6 +23,7 @@ The User Organisation App is designed to manage user data and organisational hie
 |--- .gitignore
 |--- package.json
 |--- tsconfig.json
+
 ```
 
 ## Dependencies (Dev)
