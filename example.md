@@ -7,15 +7,15 @@ The User Organisation App is designed to manage user data and organisational hie
 
 ## Folder Structure
 
+This is a folder structure
+
 ```
 |--- src
 |    |--- controllers
-          |--- v1
 |    |--- database
 |    |--- interfaces
 |    |--- middlewares
 |    |--- routes
-|         |--- v1
 |    |--- services
 |    |--- utils
 |    |--- server.ts
