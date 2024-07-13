@@ -1,8 +1,9 @@
-# [App Name] Integration Documentation
+```markdown
+# User Organisation App Integration Documentation
 
 ## Overview
 
-[Description]
+The User Organisation App is designed to manage user data and organisational hierarchies efficiently. It leverages Node.js and TypeScript to provide a robust and scalable backend service.
 
 ## Folder Structure
 
@@ -49,7 +50,6 @@ Before you begin, ensure you have the following installed on your machine:
 
 Fork this repository by clicking on the fork button on the top of this page.
 This will create a copy of this repository in your account.
-
 
 ## Clone the repository
 
@@ -107,7 +107,7 @@ Run the existing tests to ensure your changes do not break anything. If you adde
 npm run test
 ```
 
-## commit those changes
+## Commit those changes
 
 Now open `Contributors.md` file in a text editor, add your name to it. Don't add it at the beginning or end of the file. Put it anywhere in between. Now, save the file.
 
@@ -157,8 +157,8 @@ Soon your changes will be merged into the staging branch of this project. You wi
 First, clone the repository to your local machine using Git.
 
 ```sh
-git clone https://github.com/your-username/[app-name].git
-cd [app-name]
+git clone https://github.com/your-username/user-organisation-app.git
+cd user-organisation-app
 ```
 
 ### 2. Install Dependencies
@@ -254,4 +254,5 @@ All API endpoints can be referenced in the [API Reference](API_REFERENCE.md) doc
 
 ## Versioning
 
-This project is versioned to ensure backward compatibility and easy maintenance. The current version is [version].
+This project is versioned to ensure backward compatibility and easy maintenance. The current version is 1.0.0.
+```
