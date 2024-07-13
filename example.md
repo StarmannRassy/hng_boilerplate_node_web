@@ -1,4 +1,3 @@
-```markdown
 # User Organisation App Integration Documentation
 
 ## Overview
