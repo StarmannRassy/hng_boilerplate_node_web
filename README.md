@@ -1,4 +1,4 @@
-# [App Name] Integration Documentation
+<!-- # [App Name] Integration Documentation
 
 ## Overview
 
@@ -254,4 +254,154 @@ All API endpoints can be referenced in the [API Reference](API_REFERENCE.md) doc
 
 ## Versioning
 
-This project is versioned to ensure backward compatibility and easy maintenance. The current version is [version].
+This project is versioned to ensure backward compatibility and easy maintenance. The current version is [version]. -->
+
+# User Organisation App
+
+## Overview
+
+The User Organisation App is designed to manage user data and organisational hierarchies efficiently. It leverages Node.js and TypeScript to provide a robust and scalable backend service.
+
+## Table of Contents
+
+- Folder Structure
+- Dependencies
+- Getting Started
+- Contribution Guide
+- Setup Instructions
+- API Design
+- Database Design
+- Scripts
+- Additional Resources
+- API Endpoints
+- Versioning
+
+## Folder Structure
+
+
+|— src | 
+  |— controllers | 
+  |— database | 
+  |— interfaces | 
+  |— middlewares | 
+  |— routes | 
+  |— services | 
+  |— utils | 
+|— server.ts 
+|— .env 
+|— app.ts 
+|— .gitignore 
+|— package.json 
+|— tsconfig.json
+
+
+## Dependencies
+
+- Node.js
+- TypeScript
+- Express
+- ts-node-dev
+- [Other dependencies]
+
+## Getting Started
+
+Before you begin, ensure you have the following installed on your machine:
+
+- Node.js (v14 or later)
+- npm (Node Package Manager, included with Node.js)
+- Git
+
+## Contribution Guide
+
+### Form a Squad
+
+Break into teams of 5 members only. Collaboration, trust, and teamwork are key!
+
+### Objective
+
+Access the boilerplate URLs below and decide which repo your team will contribute to. Ensure you follow the contribution guidelines.
+
+- Python FastAPI Web
+- NestJS
+- Golang Web
+- Node Web
+- C# Web
+- PHP Laravel Web
+
+### Tasks
+
+1. **API Design**: Collaboratively craft a proper and complete API design for the chosen boilerplate repo using OpenAPI.
+2. **Database Design**: Create a robust, well-structured, and visible database blueprint/design.
+
+### Submission
+
+1. Fork the chosen boilerplate repo.
+2. Create a new branch using your squad/group name.
+3. Prepare a detailed README file with your API design and Database Design. Include links to your design in the README file.
+4. Submit your URL to your FORKED repo branch to the submission form provided.
+
+## Setup Instructions
+
+### 1. Clone the Repository
+
+First, clone the repository to your local machine using Git.
+
+```sh
+git clone https://github.com/your-username/user-organisation-app.git
+cd user-organisation-app
+
+2. Install Dependencies
+Navigate to the project directory and install the required dependencies.
+
+npm install
+
+3. Configure Environment Variables
+Create a .env file in the root directory of the project and add your environment-specific variables. You can use the provided .env.example file as a reference.
+
+cp .env.example .env
+
+Edit the .env file to match your environment configuration.
+
+4. Compile TypeScript
+Compile the TypeScript code to JavaScript.
+
+npm run build
+
+5. Run the Development Server
+Start the development server with the following command. This will also watch for any changes in your code and automatically restart the server.
+
+npm run start:dev
+
+6. Run the Production Server
+To run the application in a production environment, use the following command:
+
+npm run start
+
+7. Verify the Setup
+Open your browser and navigate to http://localhost:3000/api/v1/ to verify that the application is running correctly.
+
+API Design
+Our API design follows the OpenAPI specification. You can find the detailed API design here.
+
+Database Design
+The database design is structured to ensure robustness and scalability. You can view the detailed database blueprint here.
+
+Scripts
+Here are some useful npm scripts that you can use during development and production:
+
+npm run build: Compiles the TypeScript code to JavaScript.
+npm run start:dev: Starts the development server with live reloading.
+npm run start: Starts the production server.
+npm run test: Runs the test suite (if available).
+npm run lint: Runs the linter to check for code style issues.
+Additional Resources
+Node.js Documentation
+TypeScript Documentation
+Express Documentation
+By following these steps, you should have your Node.js and TypeScript application up and running. If you encounter any issues, please refer to the documentation of the respective tools or seek help from the community.
+
+API Endpoints
+All API endpoints can be referenced in the API Reference document.
+
+Versioning
+This project is versioned to ensure backward compatibility and easy maintenance. The current version is 1.0.0

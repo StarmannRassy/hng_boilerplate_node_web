@@ -90,6 +90,7 @@ Before you begin, ensure you have the following installed on your machine:
 
 ## Contribution Guide
 
+
 ## Getting Started
 
 #### If you don't have git on your machine, [install it](https://docs.github.com/en/get-started/quickstart/set-up-git).
@@ -185,17 +186,6 @@ replacing `your-branch-name` with the name of the branch you created earlier.
   Go to [GitHub's tutorial](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) on generating and configuring an SSH key to your account.
 
 </details>
-
-## Submit your changes for review into Staging
-
-If you go to your repository on GitHub, you'll see a `Compare & pull request` button. Click on that button.
-
-<img style="float: right;" src="https://firstcontributions.github.io/assets/Readme/compare-and-pull.png" alt="create a pull request" />
-
-Now submit the pull request.
-
-<img style="float: right;" src="https://firstcontributions.github.io/assets/Readme/submit-pull-request.png" alt="submit pull request" />
-
 Soon your changes will be merged into the staging branch of this project. You will get a notification email once the changes have been merged.
 
 ## Setup Instructions
@@ -205,8 +195,8 @@ Soon your changes will be merged into the staging branch of this project. You wi
 First, clone the repository to your local machine using Git.
 
 ```sh
-git clone https://github.com/your-username/user-organisation-app.git
-cd user-organisation-app
+git clone https://github.com/StarmannReassy/hng_boilerplate_node_web.git
+cd hng_boilerplate_node_web.git
 ```
 
 ### 2. Install Dependencies
@@ -297,8 +287,27 @@ Here are some useful npm scripts that you can use during development and product
 By following these steps, you should have your Node.js and TypeScript application up and running. If you encounter any issues, please refer to the documentation of the respective tools or seek help from the community.
 
 ## API Endpoints
+- Example to how the endpoints looks like..
+- **GET /api/v1/users**: Retrieves a list of all users.
+  - Parameters: None
+  - Response: An array of user objects.
 
-All API endpoints can be referenced in the [API Reference](API_REFERENCE.md) document.
+- **POST /api/v1/users**: Creates a new user.
+  - Parameters: User data (name, email, etc.)
+  - Response: The newly created user object.
+
+All API endpoints can be referenced in the [API Reference](https://app.swaggerhub.com/apis/BLARD/TechDevs/1.0.0) document.
+
+## Database Schema
+
+Our application uses a Postgres database with the following Tables:
+
+- **Users**: Stores user information (name, email, etc.)
+- **Organizations**: Represents organizational hierarchies.
+- ...
+
+Here's a simplified [ER diagram:](https://app.eraser.io/workspace/8Av0Vdm6JOpMtc3uxQCO?origin=share&elements=qIHB3yk1wrfaHVQKGvjOwQ)
+
 
 ## Versioning
 
