@@ -9,7 +9,6 @@
 - Getting Started
 - Contribution Guide
 - Setup Instructions
-- API Design
 - Database Design
 - Scripts
 - Additional Resources
@@ -65,8 +64,6 @@ This document outlines the database design for the User Organisation App, focusi
 
 - **One-to-Many Relationship:** 
   - An organisation can have multiple users. This is represented by the foreign key `organisation_id` in the `users` table.
-
-
 
 
 ## Folder Structure
