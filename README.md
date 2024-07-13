@@ -1,10 +1,77 @@
-<!-- # [App Name] Integration Documentation
+# User Organisation App Integration Documentation
+
+## Table of Contents
+
+- Overview
+- Databse design
+- Folder Structure
+- Dependencies
+- Getting Started
+- Contribution Guide
+- Setup Instructions
+- API Design
+- Database Design
+- Scripts
+- Additional Resources
+- API Endpoints
+- API Reference
+- Versioning
 
 ## Overview
 
-[Description]
+The User Organisation App is designed to manage user data and organisational hierarchies efficiently. It leverages Node.js and TypeScript to provide a robust and scalable backend service.
+
+## Database Design (ERD)
+
+![database](./public/hng_erd.jpg)
+
+
+# Database Design Overview
+
+This document outlines the database design for the User Organisation App, focusing on the `User` and `Organisation` entities.
+
+## Entities and Relationships
+
+### 1. User
+
+- **Table Name:** `users`
+- **Description:** Stores user information.
+- **Fields:**
+  - `id` (Primary Key, UUID): Unique identifier for each user.
+  - `username` (String): Unique username for the user.
+  - `email` (String): Unique email address for the user.
+  - `password` (String): Hashed password for authentication.
+  - `first_name` (String): User's first name.
+  - `last_name` (String): User's last name.
+  - `organisation_id` (Foreign Key, UUID): References the organisation to which the user belongs.
+  - `role` (String): Role of the user within the organisation (e.g., admin, member).
+  - `created_at` (Timestamp): Timestamp when the user was created.
+  - `updated_at` (Timestamp): Timestamp when the user was last updated.
+
+### 2. Organisation
+
+- **Table Name:** `organisations`
+- **Description:** Stores organisation information.
+- **Fields:**
+  - `id` (Primary Key, UUID): Unique identifier for each organisation.
+  - `name` (String): Name of the organisation.
+  - `address` (String): Address of the organisation.
+  - `phone` (String): Contact phone number for the organisation.
+  - `email` (String): Contact email address for the organisation.
+  - `created_at` (Timestamp): Timestamp when the organisation was created.
+  - `updated_at` (Timestamp): Timestamp when the organisation was last updated.
+
+## Relationships
+
+- **One-to-Many Relationship:** 
+  - An organisation can have multiple users. This is represented by the foreign key `organisation_id` in the `users` table.
+
+
+
 
 ## Folder Structure
+
+This is a folder structure
 
 ```
 |--- src
@@ -41,6 +108,7 @@ Before you begin, ensure you have the following installed on your machine:
 
 ## Contribution Guide
 
+
 ## Getting Started
 
 #### If you don't have git on your machine, [install it](https://docs.github.com/en/get-started/quickstart/set-up-git).
@@ -49,7 +117,6 @@ Before you begin, ensure you have the following installed on your machine:
 
 Fork this repository by clicking on the fork button on the top of this page.
 This will create a copy of this repository in your account.
-
 
 ## Clone the repository
 
@@ -107,7 +174,7 @@ Run the existing tests to ensure your changes do not break anything. If you adde
 npm run test
 ```
 
-## commit those changes
+## Commit those changes
 
 Now open `Contributors.md` file in a text editor, add your name to it. Don't add it at the beginning or end of the file. Put it anywhere in between. Now, save the file.
 
@@ -137,17 +204,6 @@ replacing `your-branch-name` with the name of the branch you created earlier.
   Go to [GitHub's tutorial](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) on generating and configuring an SSH key to your account.
 
 </details>
-
-## Submit your changes for review into Staging
-
-If you go to your repository on GitHub, you'll see a `Compare & pull request` button. Click on that button.
-
-<img style="float: right;" src="https://firstcontributions.github.io/assets/Readme/compare-and-pull.png" alt="create a pull request" />
-
-Now submit the pull request.
-
-<img style="float: right;" src="https://firstcontributions.github.io/assets/Readme/submit-pull-request.png" alt="submit pull request" />
-
 Soon your changes will be merged into the staging branch of this project. You will get a notification email once the changes have been merged.
 
 ## Setup Instructions
@@ -157,8 +213,8 @@ Soon your changes will be merged into the staging branch of this project. You wi
 First, clone the repository to your local machine using Git.
 
 ```sh
-git clone https://github.com/your-username/[app-name].git
-cd [app-name]
+git clone https://github.com/StarmannReassy/hng_boilerplate_node_web.git
+cd hng_boilerplate_node_web.git
 ```
 
 ### 2. Install Dependencies
@@ -249,159 +305,31 @@ Here are some useful npm scripts that you can use during development and product
 By following these steps, you should have your Node.js and TypeScript application up and running. If you encounter any issues, please refer to the documentation of the respective tools or seek help from the community.
 
 ## API Endpoints
+- Example to how the endpoints looks like..
+- **GET /api/v1/users**: Retrieves a list of all users.
+  - Parameters: None
+  - Response: An array of user objects.
 
-All API endpoints can be referenced in the [API Reference](API_REFERENCE.md) document.
+- **POST /api/v1/users**: Creates a new user.
+  - Parameters: User data (name, email, etc.)
+  - Response: The newly created user object.
+
+### API Reference
+All API endpoints can be referenced in the [API Reference](https://app.swaggerhub.com/apis/BLARD/TechDevs/1.0.0) document.
+
+
+## Database Schema
+
+Our application uses a Postgres database with the following Tables:
+
+- **Users**: Stores user information (name, email, etc.)
+- **Organizations**: Represents organizational hierarchies.
+- ...
+
+Here's a simplified [ER diagram:](https://app.eraser.io/workspace/8Av0Vdm6JOpMtc3uxQCO?origin=share&elements=qIHB3yk1wrfaHVQKGvjOwQ)
+
 
 ## Versioning
 
-This project is versioned to ensure backward compatibility and easy maintenance. The current version is [version]. -->
-
-# User Organisation App
-
-## Overview
-
-The User Organisation App is designed to manage user data and organisational hierarchies efficiently. It leverages Node.js and TypeScript to provide a robust and scalable backend service.
-
-## Table of Contents
-
-- Folder Structure
-- Dependencies
-- Getting Started
-- Contribution Guide
-- Setup Instructions
-- API Design
-- Database Design
-- Scripts
-- Additional Resources
-- API Endpoints
-- Versioning
-
-## Folder Structure
-
-
-|— src | 
-  |— controllers | 
-  |— database | 
-  |— interfaces | 
-  |— middlewares | 
-  |— routes | 
-  |— services | 
-  |— utils | 
-|— server.ts 
-|— .env 
-|— app.ts 
-|— .gitignore 
-|— package.json 
-|— tsconfig.json
-
-
-## Dependencies
-
-- Node.js
-- TypeScript
-- Express
-- ts-node-dev
-- [Other dependencies]
-
-## Getting Started
-
-Before you begin, ensure you have the following installed on your machine:
-
-- Node.js (v14 or later)
-- npm (Node Package Manager, included with Node.js)
-- Git
-
-## Contribution Guide
-
-### Form a Squad
-
-Break into teams of 5 members only. Collaboration, trust, and teamwork are key!
-
-### Objective
-
-Access the boilerplate URLs below and decide which repo your team will contribute to. Ensure you follow the contribution guidelines.
-
-- Python FastAPI Web
-- NestJS
-- Golang Web
-- Node Web
-- C# Web
-- PHP Laravel Web
-
-### Tasks
-
-1. **API Design**: Collaboratively craft a proper and complete API design for the chosen boilerplate repo using OpenAPI.
-2. **Database Design**: Create a robust, well-structured, and visible database blueprint/design.
-
-### Submission
-
-1. Fork the chosen boilerplate repo.
-2. Create a new branch using your squad/group name.
-3. Prepare a detailed README file with your API design and Database Design. Include links to your design in the README file.
-4. Submit your URL to your FORKED repo branch to the submission form provided.
-
-## Setup Instructions
-
-### 1. Clone the Repository
-
-First, clone the repository to your local machine using Git.
-
-```sh
-git clone https://github.com/your-username/user-organisation-app.git
-cd user-organisation-app
-
-2. Install Dependencies
-Navigate to the project directory and install the required dependencies.
-
-npm install
-
-3. Configure Environment Variables
-Create a .env file in the root directory of the project and add your environment-specific variables. You can use the provided .env.example file as a reference.
-
-cp .env.example .env
-
-Edit the .env file to match your environment configuration.
-
-4. Compile TypeScript
-Compile the TypeScript code to JavaScript.
-
-npm run build
-
-5. Run the Development Server
-Start the development server with the following command. This will also watch for any changes in your code and automatically restart the server.
-
-npm run start:dev
-
-6. Run the Production Server
-To run the application in a production environment, use the following command:
-
-npm run start
-
-7. Verify the Setup
-Open your browser and navigate to http://localhost:3000/api/v1/ to verify that the application is running correctly.
-
-API Design
-Our API design follows the OpenAPI specification. You can find the detailed API design here.
-
-Database Design
-The database design is structured to ensure robustness and scalability. You can view the detailed database blueprint here.
-
-Scripts
-Here are some useful npm scripts that you can use during development and production:
-
-npm run build: Compiles the TypeScript code to JavaScript.
-npm run start:dev: Starts the development server with live reloading.
-npm run start: Starts the production server.
-npm run test: Runs the test suite (if available).
-npm run lint: Runs the linter to check for code style issues.
-Additional Resources
-Node.js Documentation
-TypeScript Documentation
-Express Documentation
-By following these steps, you should have your Node.js and TypeScript application up and running. If you encounter any issues, please refer to the documentation of the respective tools or seek help from the community.
-
-API Endpoints
-All API endpoints can be referenced in the API Reference document.
-
-Versioning
-This project is versioned to ensure backward compatibility and easy maintenance. The current version is 1.0.0
+This project is versioned to ensure backward compatibility and easy maintenance. The current version is 1.0.0.
+```

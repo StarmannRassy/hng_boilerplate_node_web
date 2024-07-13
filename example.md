@@ -1,10 +1,30 @@
 # User Organisation App Integration Documentation
 
+## Table of Contents
+
+- Overview
+- Databse design
+- Folder Structure
+- Dependencies
+- Getting Started
+- Contribution Guide
+- Setup Instructions
+- API Design
+- Database Design
+- Scripts
+- Additional Resources
+- API Endpoints
+- API Reference
+- Versioning
+
 ## Overview
 
 The User Organisation App is designed to manage user data and organisational hierarchies efficiently. It leverages Node.js and TypeScript to provide a robust and scalable backend service.
 
 ## Database Design (ERD)
+
+![database](./public/hng_erd.jpg)
+
 
 # Database Design Overview
 
@@ -46,9 +66,7 @@ This document outlines the database design for the User Organisation App, focusi
 - **One-to-Many Relationship:** 
   - An organisation can have multiple users. This is represented by the foreign key `organisation_id` in the `users` table.
 
-## ER Diagram
 
-![database](./public/hng_erd.jpg)
 
 
 ## Folder Structure
@@ -296,7 +314,9 @@ By following these steps, you should have your Node.js and TypeScript applicatio
   - Parameters: User data (name, email, etc.)
   - Response: The newly created user object.
 
+### API Reference
 All API endpoints can be referenced in the [API Reference](https://app.swaggerhub.com/apis/BLARD/TechDevs/1.0.0) document.
+
 
 ## Database Schema
 

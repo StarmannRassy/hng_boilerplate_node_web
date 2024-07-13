@@ -1,6 +1,6 @@
 # Contribution Guide
 
-Thank you for considering contributing to [App Name]! We welcome all types of contributions, including bug reports, feature requests, documentation improvements, and code enhancements.
+Thank you for considering contributing to TechDevs's User-Organisation App! We welcome all types of contributions, including bug reports, feature requests, documentation improvements, and code enhancements.
 
 ## Contribution Rules
 

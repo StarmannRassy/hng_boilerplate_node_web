@@ -3,7 +3,6 @@
 
 
 
-Muareen Attah
 Erasmus Tayviah
 Maureen Attah
 Yaw Mintah
